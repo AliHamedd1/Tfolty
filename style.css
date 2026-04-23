@@ -527,8 +527,15 @@ h3 {
 .feature-grid,
 .social-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 22px;
+}
+
+.feature-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.social-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr));
 }
 
 .feature-card,
@@ -710,10 +717,6 @@ h3 {
     background: linear-gradient(180deg, var(--white), var(--soft-bg));
 }
 
-.social-grid {
-    grid-template-columns: repeat(5, 1fr);
-}
-
 .social-card {
     display: grid;
     min-height: 180px;
@@ -888,7 +891,7 @@ h3 {
     }
 
     .social-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr));
     }
 }
 
@@ -939,7 +942,6 @@ h3 {
 
     .feature-grid,
     .contact-grid,
-    .social-grid,
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -1026,8 +1028,11 @@ h3 {
 
     .feature-grid,
     .contact-grid,
-    .social-grid,
     .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-grid {
         grid-template-columns: 1fr;
     }
 
